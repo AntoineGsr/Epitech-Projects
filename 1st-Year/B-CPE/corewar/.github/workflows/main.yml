@@ -1,0 +1,61 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Auto-Test
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+
+  pull_request:
+
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  Build:
+    runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build
+        run: make && make re && make clean && make fclean
+
+  Auto-Test-Asm:
+    needs: Build
+    runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Asm
+        run: make && cd tests && ./asmTest.sh ; ./asmErrorTest.sh && cd ..
+
+  Auto-Test-Corewar:
+    needs: Build
+    runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Corewar
+        run: make && cd tests && ./corewarTest.sh ; ./corewarErrorTest.sh && cd ..
+
+  Valgrind:
+    runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Valgrind
+        run: make && tests/valgrindTest.sh
+
+  Norm:
+    runs-on: ubuntu-latest
+    container: epitechcontent/epitest-docker
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Norm
+        run: tests/normTest.sh

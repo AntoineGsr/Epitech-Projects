@@ -1,0 +1,17 @@
+What's up my Lil Tek ?
+
+Welcome to One Hunter, the BEST Duck-Hunt like game, based on a tru... uhm... One Piece theme.
+You should play Usopp AKA Sniper King ! *shuuut*
+You have to kill the crows. If three birds escape your shooting range... YOU LOST ! *you're bad, stop video games*
+Select the number of birds you want (positive number in first argument). By default the number of birds is 6.
+
+Have a good game !
+
+Not allowed to play on /wednesday my dude.
+
+Available inputs:
+mouse left click to kill
+mouse right click to stop
+
+Usage:
+./my_hunter

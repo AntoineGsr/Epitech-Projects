@@ -1,0 +1,34 @@
+Finite runner created with CSFML.
+Everything is home made (by myself).
+Except the character, coins, buttons sprites and musics.
+This game have : (every button is functional)
+-9 home made parallax
+-Press menu
+-Main menu with "Start, Controls, Settings, Quit"
+	-> Settings: 8D to activate a 8D music
+		     volume logo to turn on/off the coins sound effect
+		     music logo to turn on/off the music volume
+-Pause menu "Resume, Restart, Volume logo, Music logo, Exit"
+	->Exit: left the game
+-Home logo: come back to the Main menu
+-Win/Loose menu: same buttons but a different design
+	->Loose menu: wait 2 seconds to have the buttons on the screen
+		      (because the skull is so cute)
+-Display your score
+-Display the highest score made
+-3 differents kinds of mobile sprites:
+	->Spike: kill you if you touch it
+	->Coin: collect all of them (like pokemons)
+	->Portal: reach it to win
+
+USAGE
+ ./my_runner map.txt
+
+
+OPTIONS
+  -i		   launch the game in infinity mode.
+  -h		   print the usage and quit.
+
+USER INTERACTIONS
+  SPACE_KEY	  jump.
+  MOUSE_LEFT      click to select.

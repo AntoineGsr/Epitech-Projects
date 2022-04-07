@@ -1,0 +1,16 @@
+window_size_x:1920
+window_size_y:1043
+bit_per_pixel:1043
+full_screen_mod:0
+fps:60
+music_vol:32
+sound_vol:185
+up:25
+down:18
+left:16
+right:3
+game_menu:36
+inventory:4
+interaction:4
+switch_weapon:5
+reload:17
