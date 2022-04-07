@@ -1,2 +1,2 @@
 # Epitech-Projects
-A part of my Epitech's project
+A part of my Epitech's projects
